@@ -1,4 +1,4 @@
-# include <iostream>
+#include <iostream>
 #include <string>
 #include <map>
 #include <sstream>
@@ -54,18 +54,19 @@ int main(){
     std::string numStr;
     std::getline(std::cin,numStr);
 
+    std::ostringstream res;
     while(numStr != "."){
         std::istringstream numIn (numStr);
         int num;
         numIn >> num;
         if(isInRange(num, rangesByFrom, rangesByTo)){
-            std::cout << "in" <<std::endl;
+            res << "in" <<std::endl;
         }else{
-            std::cout << "out" <<std::endl;
+            res << "out" <<std::endl;
         }
         std::getline(std::cin,numStr);
     }
-
+    std::cout << res.str()<<std::endl;
     return 0;
 }
 
