@@ -22,7 +22,7 @@ public:
 		return this->lengthSeconds;
 	}
 };
-
+//sf
 std::ostream& operator<<(std::ostream& out, const Song& s) {
 	return out << s.getName() << " " << s.getLengthSeconds();
 }

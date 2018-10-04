@@ -43,7 +43,7 @@ int main() {
 	std::string line;
 	std::getline(std::cin, line);
 
-	char type; 
+	char type;
 	std::string joinStr;
 	std::cin >> type >> joinStr;
 
