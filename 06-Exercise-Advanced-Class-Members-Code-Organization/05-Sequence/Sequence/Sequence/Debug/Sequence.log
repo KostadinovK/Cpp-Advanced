@@ -1,0 +1,19 @@
+﻿  SequencesMain.cpp
+d:\softuni courses\cpp-advanced\06-exercise-advanced-class-members-code-organization\05-sequence\sequence.h(52): error C2100: illegal indirection
+  d:\softuni courses\cpp-advanced\06-exercise-advanced-class-members-code-organization\05-sequence\sequence.h(51): note: while compiling class template member function 'bool SequenceIter<T>::operator !=(const SequenceIter<T> &)'
+          with
+          [
+              T=int
+          ]
+  d:\softuni courses\cpp-advanced\06-exercise-advanced-class-members-code-organization\05-sequence\sequencesmain.cpp(43): note: see reference to function template instantiation 'bool SequenceIter<T>::operator !=(const SequenceIter<T> &)' being compiled
+          with
+          [
+              T=int
+          ]
+  d:\softuni courses\cpp-advanced\06-exercise-advanced-class-members-code-organization\05-sequence\sequencesmain.cpp(43): note: see reference to class template instantiation 'SequenceIter<T>' being compiled
+          with
+          [
+              T=int
+          ]
+  d:\softuni courses\cpp-advanced\06-exercise-advanced-class-members-code-organization\05-sequence\sequencesmain.cpp(55): note: see reference to function template instantiation 'void readGenerateWrite<int,IntegersGenerator>(void)' being compiled
+d:\softuni courses\cpp-advanced\06-exercise-advanced-class-members-code-organization\05-sequence\sequence.h(52): error C2088: '!=': illegal for class

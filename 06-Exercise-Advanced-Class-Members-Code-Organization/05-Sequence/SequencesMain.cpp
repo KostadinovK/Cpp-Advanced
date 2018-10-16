@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Sequence.h"
+#include "Sequence2.h"
 
 class IntegersGenerator {
 	int last;
@@ -48,6 +48,7 @@ void readGenerateWrite() {
 }
 
 int main() {
+
 	char generatorType;
 	std::cin >> generatorType;
 	if (generatorType == 'i') {
