@@ -1,58 +1,28 @@
-#pragma once
+#ifndef WORD_H
+#define WORD_H
 
+#include <cstdlib>
 #include <string>
-#include <vector>
-#include <sstream>
-#include <iostream>
+#include <map>
+#include <set>
 
 class Word {
+	std::string str;
+
+	static std::map<std::string, int> WordObjectsCounts;
+	static std::map<std::string, int> WordCounts;
 public:
-	static int amount;
-	std::string word;
-	int count;
-	Word() {}
-	Word(std::string word) : word(word), count(0) {
-		amount++;
-	}
+	Word(std::string str);
+	Word(const Word& other);
 
-	Word(const Word& other) {
-		this->word = other.word;
-		this->count = other.count + 1;
-		amount++;
-		std::cout << "Copy constructor called for word: " << this->word << std::endl;
-		std::cout << "Amount: " << amount << std::endl;
-	}
+	std::string getWord() const;
+	size_t getCount() const;
 
-	/*Word& operator=(const Word& other) {
-		this->amount = other.amount + 1;
-		this->word = other.word;
-		std::cout << "Copy assignment operator called for word: " << this->word << std::endl;
-		std::cout << "Amount: " << this->amount << std::endl;
-		return *this;
+	bool operator<(const Word& other) const;
+	Word& operator=(const Word& other);
 
-	}*/
-
-	std::string getWord() const {
-		return this->word;
-	}
-
-	int getCount() const {
-		return amount;
-	}
-
-
-
-	friend std::ostream& operator<<(std::ostream& out, const Word& w);
-
-	~Word() {
-		this->count--;
-		amount--;
-	}
+	~Word();
 };
 
-int Word::amount = 0;
+#endif // !WORD_H
 
-bool operator<(const Word& word1, const Word& word2) {
-	
-	return word1.getCount() < word2.getCount();
-}
