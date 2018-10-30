@@ -1,8 +1,6 @@
 #ifndef AGGREGATOR_H
 #define AGGREGATOR_H
 
-#include "Parser.h"
-
 class StreamAggregator {
 private:
 	std::istream& stream;

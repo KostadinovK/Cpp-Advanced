@@ -6,6 +6,7 @@ using namespace std;
 #include "Circle.h"
 #include "Rectangle.h"
 #include "CoordinateSystemCenter.h"
+#include "Vector2D.h"
 
 Vector2D readVector() {
 	double x, y;
