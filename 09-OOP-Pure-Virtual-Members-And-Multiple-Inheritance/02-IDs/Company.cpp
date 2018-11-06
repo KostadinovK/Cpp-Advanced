@@ -1,6 +1,7 @@
 #include "Company.h"
 
 #include <exception>
+#include <string>
 
 Company::Company() {}
 
@@ -44,7 +45,6 @@ std::ostream& operator<<(std::ostream& stream, const Company& c) {
 
 	return stream;
 }
-
 std::istream& operator>>(std::istream& stream, Company& c) {
 	stream >> c.id;
 	if (!stream) {
